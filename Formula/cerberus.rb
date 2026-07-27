@@ -5,21 +5,21 @@
 class Cerberus < Formula
   desc "Drop-in Prometheus / Loki / Tempo HTTP gateway for ClickHouse"
   homepage "https://github.com/tsouza/cerberus"
-  version "1.12.0"
+  version "1.13.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tsouza/cerberus/releases/download/v1.12.0/cerberus_1.12.0_darwin_amd64.tar.gz"
-      sha256 "aa786a99654ae236d911aabaaeae3909fc23fb8fa039ea5464d208668fdc65aa"
+      url "https://github.com/tsouza/cerberus/releases/download/v1.13.0/cerberus_1.13.0_darwin_amd64.tar.gz"
+      sha256 "ef4eca38c9fabb07ada78626baf7b6241d228a710983ab3956208ba6ce2a5785"
 
       define_method(:install) do
         bin.install "cerberus"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tsouza/cerberus/releases/download/v1.12.0/cerberus_1.12.0_darwin_arm64.tar.gz"
-      sha256 "ad1682a13d6afe72ff40be68791d7b445f54130010a9f23c8936ae2d6787bbfb"
+      url "https://github.com/tsouza/cerberus/releases/download/v1.13.0/cerberus_1.13.0_darwin_arm64.tar.gz"
+      sha256 "83b67d5c10f83df23160414ab42bd455966c975fb7e59cfa2078e3d28477da7b"
 
       define_method(:install) do
         bin.install "cerberus"
@@ -29,15 +29,15 @@ class Cerberus < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tsouza/cerberus/releases/download/v1.12.0/cerberus_1.12.0_linux_amd64.tar.gz"
-      sha256 "8fcfe55ff30806d916640eea6b8c73eb492eea06f515fe626275f949046fc2f0"
+      url "https://github.com/tsouza/cerberus/releases/download/v1.13.0/cerberus_1.13.0_linux_amd64.tar.gz"
+      sha256 "af3cd458ac0feb9508ae3ea65b54dd313cdfbdcd78e4802f9720b513a738e609"
       define_method(:install) do
         bin.install "cerberus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tsouza/cerberus/releases/download/v1.12.0/cerberus_1.12.0_linux_arm64.tar.gz"
-      sha256 "b1de6250187181212fd7e4f4a94accf0ac58c9f8e8624f6e6d3c42e6f2342199"
+      url "https://github.com/tsouza/cerberus/releases/download/v1.13.0/cerberus_1.13.0_linux_arm64.tar.gz"
+      sha256 "61b3612fb721816d4faaeb6ddc9f31fecbf57eb5a53c29f085c30f7b13401228"
       define_method(:install) do
         bin.install "cerberus"
       end
